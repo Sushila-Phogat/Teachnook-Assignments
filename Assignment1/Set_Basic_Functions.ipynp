@@ -1,0 +1,805 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "collapsed_sections": [],
+      "authorship_tag": "ABX9TyOxNTN6aM8TonXRQh0z8e9U",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Sushila-Phogat/Teachnook-Assignments/blob/main/Assignment1/Set_Basic_Functions.ipynp\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 37
+        },
+        "id": "gD6yfwzKLmzR",
+        "outputId": "0a332f36-bee6-4736-fbe3-ae47a57ef836"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'r l'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ],
+      "source": [
+        "s=\"hello world\"\n",
+        "s[-3:-10:-3]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "s=\"hello world\"\n",
+        "s[-10:-6]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 37
+        },
+        "id": "wF_8QUv7Xoo8",
+        "outputId": "04324126-059e-4449-fcd3-74ee58844dc5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'ello'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 10
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# initialize set\n",
+        "my_set = {1, 3}\n",
+        "print(my_set)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "g6fwjwTdX7BW",
+        "outputId": "afa5bb61-ea4e-4185-a230-890b02b93755"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{1, 3}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# add element\n",
+        "my_set.add(2)\n",
+        "print(my_set)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Y9Y6zat_SHcZ",
+        "outputId": "4c427fc6-6228-419b-8216-f24393b96c63"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{1, 2, 3}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# add multiple elements\n",
+        "my_set.update([2, 3, 4])\n",
+        "print(my_set)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wWmY4WVBSKTk",
+        "outputId": "dcff119e-428e-4bce-bdb6-91341688375e"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{1, 2, 3, 4}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Update\n",
+        "my_set.update([4, 5], {1, 6, 8})\n",
+        "print(my_set)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "naXUee51SOrF",
+        "outputId": "1c688621-cdb9-42ad-8ef0-fc651a781b85"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{1, 2, 3, 4, 5, 6, 8}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# discard an element\n",
+        "my_set.discard(4)\n",
+        "print(my_set)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nC-O6Z9dSlOx",
+        "outputId": "ab784e46-4fff-411a-ff86-3c5c9c305639"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{1, 2, 3, 5, 6, 8}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        " #remove an element\n",
+        "my_set.remove(6)\n",
+        "print(my_set)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "e2Bcag5qSnpa",
+        "outputId": "3d36aaf3-4e54-4d58-b481-5026275ed238"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{1, 2, 3, 5, 8}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# pop an element\n",
+        "print(my_set.pop())\n",
+        "print(my_set)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oJjc2KgIStB1",
+        "outputId": "bc8c6e83-310e-4bfa-8e6b-328bb5f0e5b6"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n",
+            "{3, 5, 8}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# clear my_set\n",
+        "my_set.clear()\n",
+        "print(my_set)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ap-E0kTbS9Jc",
+        "outputId": "c41cdc09-3f15-4f55-e418-e02781d94729"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "set()\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Set union method\n",
+        "A = {1, 2, 3, 4, 5}\n",
+        "B = {4, 5, 6, 7, 8}\n",
+        "print(A | B)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZwP9Aa6UTPGl",
+        "outputId": "601f2df7-451a-4021-a85f-c3c79bd7259a"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{1, 2, 3, 4, 5, 6, 7, 8}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "A.union(B)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "c30dIp1lTTG0",
+        "outputId": "6c8ee8c1-0361-4a36-ac59-d9d5046854ab"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{1, 2, 3, 4, 5, 6, 7, 8}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 11
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Intersection of sets\n",
+        "A = {1, 2, 3, 4, 5}\n",
+        "B = {4, 5, 6, 7, 8}\n",
+        "print(A & B)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "q313lt9jTYMz",
+        "outputId": "e970c4b2-79f1-4adf-c97c-691b6d568f89"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{4, 5}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        " A.intersection(B)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oyk5dM9tTgVK",
+        "outputId": "68da98bd-e9f0-40df-d105-e98981a45710"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{4, 5}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 13
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Difference of two sets\n",
+        "A = {1, 2, 3, 4, 5}\n",
+        "B = {4, 5, 6, 7, 8}\n",
+        "\n",
+        "print(A - B)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yfFHQY5dTkFA",
+        "outputId": "059b397a-1e83-4dc9-9b87-993a6f82dd1f"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{1, 2, 3}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "A.difference(B)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ubjpng2vT2jM",
+        "outputId": "952dceb5-b17b-4d25-92ba-e85748d7046e"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{1, 2, 3}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 15
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Symmetric difference of two sets\n",
+        "A = {1, 2, 3, 4, 5}\n",
+        "B = {4, 5, 6, 7, 8}\n",
+        "print(A ^ B)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EKElMuh1T4lE",
+        "outputId": "2841023d-fba5-407c-89e9-4ed5f28fc32a"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{1, 2, 3, 6, 7, 8}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "A.symmetric_difference(B)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Cynl4_MWUFo1",
+        "outputId": "1305497e-3708-44fc-9c4c-74500bb3aa60"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{1, 2, 3, 6, 7, 8}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 17
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Copy set\n",
+        "A = {1, 2, 3, 4, 5}\n",
+        "B=A.copy()\n",
+        "print(B)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "goW7EGAAUKJY",
+        "outputId": "33ef4acd-077e-4d54-e8e5-f66f096dacf9"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{1, 2, 3, 4, 5}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# difference_update\n",
+        "A = {1, 3, 5, 7, 9}\n",
+        "B = {2, 3, 5, 7, 11}\n",
+        "A.difference_update(B)\n",
+        "\n",
+        "print(A)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "e0GUnCtNWmDA",
+        "outputId": "982beaf0-0af2-44aa-fafe-e11914ff9fc8"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{1, 9}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# intersection_update\n",
+        "A = {1, 2, 3, 4}\n",
+        "B = {2, 3, 4, 5}\n",
+        "A.intersection_update(B)\n",
+        "\n",
+        "print(A)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yOlUOagtWwro",
+        "outputId": "ea4d4539-5f8d-48a8-819f-c8368ad89d97"
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{2, 3, 4}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# isdisjoint\n",
+        "A = {1, 2, 3, }\n",
+        "B = {4, 5, 6}\n",
+        "print(A.isdisjoint(B))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tYr4ltBEXswv",
+        "outputId": "8aa8a7a9-3468-47fd-f3c8-7b02c6f72d2c"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# isdisjoint\n",
+        "A = {1, 2, 3,6 }\n",
+        "B = {4, 5, 6}\n",
+        "print(A.isdisjoint(B))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oOx3gFxlYSFI",
+        "outputId": "0651704f-f933-4a3d-e8e5-04d5820471c9"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# is A subset of B\n",
+        "A = {1, 2, 3}\n",
+        "B = {1, 2, 3, 4, 5}\n",
+        "\n",
+        "print(A.issubset(B))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pwV3KKIMYVzM",
+        "outputId": "96b1e779-1fd3-4452-ff74-14a826db4e73"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# is A subset of B\n",
+        "A = {1, 2, 3,8}\n",
+        "B = {1, 2, 3, 4, 5}\n",
+        "\n",
+        "print(A.issubset(B))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WWeUhKzZYpW0",
+        "outputId": "41492b2d-29ee-4eae-ff1c-fd98b02b64e9"
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#issuperset\n",
+        "A = {1, 2, 3, 4, 5}\n",
+        "B = {1, 2, 3}\n",
+        "C = {1, 2, 3}\n",
+        "\n",
+        "print(A.issuperset(B))\n",
+        "print(B.issuperset(A))\n",
+        "print(C.issuperset(B))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9zAe80B4YuWa",
+        "outputId": "a353f080-0a16-45d8-ba86-27d67a2cf1a8"
+      },
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n",
+            "False\n",
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Frozensets--immutable set\n",
+        "A = frozenset([1, 2, 3, 4])\n",
+        "B = frozenset([3, 4, 5, 6])\n",
+        "A.difference(B)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "w8jk4SFiY9Nt",
+        "outputId": "7f282ecc-a668-4339-f7cf-17a00d2b466f"
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "frozenset({1, 2})"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 27
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "A.add(3)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 164
+        },
+        "id": "wcM5hw57ZohE",
+        "outputId": "13dc6bcc-7f37-4fbc-8e36-9716c0d911a6"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "AttributeError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-28-a0e0b3f02a4a>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mA\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0madd\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;36m3\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mAttributeError\u001b[0m: 'frozenset' object has no attribute 'add'"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "languages = ['Python', 'Java', 'JavaScript']\n",
+        "enumerate_prime = enumerate(languages)\n",
+        "print(dict(enumerate_prime))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZzEjiIGlcvC9",
+        "outputId": "20478e31-cb58-4480-aab2-33bb249004ec"
+      },
+      "execution_count": 30,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{0: 'Python', 1: 'Java', 2: 'JavaScript'}\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
